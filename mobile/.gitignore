@@ -1,0 +1,19 @@
+# Flutter
+
+# This file is used by Flutter to keep generated metadata out of version control.
+
+.dart_tool/
+.packages
+.pub-cache/
+.pubspec.lock
+
+# Generated files
+build/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
