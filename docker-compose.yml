@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  api:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      - DATABASE_URL=postgresql://postgres:changeme@db:5432/campus_nav
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: changeme
+      POSTGRES_DB: campus_nav
+    ports:
+      - "5432:5432"
+  admin:
+    build: ./admin
+    ports:
+      - "8080:80"
